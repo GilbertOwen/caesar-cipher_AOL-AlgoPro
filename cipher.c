@@ -3,7 +3,7 @@
 
 void clear_input_buffer()
 {
-    int c;
+    char c;
     while ((c = getchar()) != '\n' && c != EOF)
         ; // Bersihkan buffer input
 }
@@ -84,27 +84,35 @@ int main()
 
         // Give information about the input, we want to input the number of shifts that we want to use to encrypt the message
         printf("Cipher do :  ");
+
         // Then, we create the input to get what we type to a variable named shift with integer type
         // After that, to prevent the next input to get an enter, we use getchar() method
         scanf("%c", &task);
+
         clear_input_buffer();
+
         if (task != 'e' && task != 'E' && task != 'd' && task != 'D')
         {
             continue;
         }
+
         // Give information about the input, we want to input the message that will be encrypted\decrypt by the program
         (task == 'e' || task == 'e')
             ? printf("Input the text that is going to be encrypted : ")
             : printf("Input the text that is going to be decrypted : ");
+
         // Then, we create the input to get what we type to a variable named message
         scanf("%[^\n]s", message);
+
         // After that, to prevent the next input to get an enter, we use getchar() method
         getchar();
 
         // Give information about the input, we want to input the number of shifts that we want to use to encrypt the message
         printf("Input the number of shifts you want to do : ");
+
         // Then, we create the input to get what we type to a variable named shift with integer type
         scanf("%d", &shift);
+        
         // After that, to prevent the next input to get an enter, we use getchar() method
         getchar();
 
